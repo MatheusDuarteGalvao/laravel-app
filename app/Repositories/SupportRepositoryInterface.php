@@ -8,7 +8,7 @@ use App\DTO\{
 };
 use stdClass;
 
-interface SupporRepositoryInterface
+interface SupportRepositoryInterface
 {
     public function getAll(string $filter = null): array;
     public function findOne(string $id): stdClass|null;
