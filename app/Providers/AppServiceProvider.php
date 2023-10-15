@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repositories\SupporRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
+use SupporEloquentORM;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            SupporRepositoryInterface::class,
+            SupporEloquentORM::class
+        );
     }
 
     /**
