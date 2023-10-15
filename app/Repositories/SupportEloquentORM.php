@@ -19,7 +19,7 @@ class SupportEloquentORM implements SupportRepositoryInterface
         $result = $this->model
                     ->where(function($query) use ($filter) {
                         if ($filter) {
-                            $query->where('subjecy', $filter);
+                            $query->where('subject', $filter);
                             $query->orWhere('body', 'like', "%$filter%");
                         }
                     })
@@ -33,7 +33,7 @@ class SupportEloquentORM implements SupportRepositoryInterface
         return $this->model
                     ->where(function($query) use ($filter) {
                         if ($filter) {
-                            $query->where('subjecy', $filter);
+                            $query->where('subject', $filter);
                             $query->orWhere('body', 'like', "%$filter%");
                         }
                     })
