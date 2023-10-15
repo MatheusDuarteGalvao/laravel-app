@@ -8,9 +8,10 @@
 
 @section('content')
 @include('admin.supports.partials.content')
-@endsection
 
 <x-pagination
-    :paginator="$supports"
-    :appends="$filters"
+:paginator="$supports"
+:appends="$filters"
 />
+
+@endsection
